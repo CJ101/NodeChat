@@ -1,0 +1,60 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="main.css">
+<!--
+<meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+	-->
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="jquery.easing.js"></script>
+<script src="/node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
+</head>
+<body>
+<script src="client.js">
+
+</script>
+
+<section class="drawer"><div class="drawer_spacer"></div>
+	<section class="drawer_menu">
+	<section class="drawer_menu_text">Rooms, hopefully</section>
+	<section class="drawer_menu_text">Menu Item 2</section>
+	</section>
+</section>
+<section class="overlay">
+</section>
+<section class="container">
+
+<section class="overlay"></section>
+<section class="top"><img class="hamburger" src="/res/hamburger.png"></img><h1>Node Chat</h1></section>
+<!-- smaller sidebox -->
+
+<!-- Large, main box, shows chat and submission box. -->
+<section class="card secondary light_mode">
+	<section class="envelope">
+			<section class="chat_container"></section>
+			<section class="post_area">
+				<section class="chat_box_cutout">
+				<input class="post_box post_box_chat text" type="text" name="message" maxlength="250" placeholder="Message"/>
+			</section>
+			</section>
+	</section>
+</section>
+
+<section class="card mini light_mode">
+	<!-- container for formatting purposes -->
+	<section class="envelope">
+	<input class="post_box post_box_name text name" type="text" name="nickname" maxlength="12" placeholder="Name"/></br>
+	<input class="submit" type="button" value="Join Room" />
+	</section>
+	<section class="users_online"></section>
+	<section class="toggle_settings"><span class="toggle_setting_item"><button class="toggle toggle_inactive" name="timestamps"></button><button class="toggle toggle_inactive" name="dark_mode"></button></span></section>
+
+</section>
+
+<div class="author">CJ Goodall</div>
+</section>
+</body>
+</html>

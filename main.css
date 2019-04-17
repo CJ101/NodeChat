@@ -1,0 +1,402 @@
+@font-face {
+  font-family : 'Code';
+  src         : url('/res/code.ttf');
+}
+
+body,
+html {
+  margin   : 0;
+  padding  : 0;
+  overflow : hidden;
+}
+
+a,
+a:active,
+a:after {
+  color : white;
+}
+
+.container {
+  display         : flex;
+  width           : 100%;
+  height          : 100%;
+  background      : #cfd8dc;
+  align-items     : center;
+  justify-content : center;
+  position:relative;
+}
+
+.top {
+  z-index     : 8;
+  display     : flex;
+  position    : absolute;
+  top         : 0;
+  right       : 0;
+  left        : 0;
+  width       : 100%;
+  height      : 7%;
+  min-height:50px;
+  color       : white;
+  background  : rgba(0,145,234, 1);
+  box-shadow  : 0 0 3px 2px rgba(0,0,0, .1);
+  align-items : center;
+  font-family : 'Roboto';
+}
+
+h1 {
+  margin-left : 10%;
+  font-size   : 19pt;
+  font-weight : 200;
+}
+
+.card {
+  z-index       : 1;
+  width         : 55%;
+  height        : 65%;
+  margin        : 10px;
+  border-radius : 7px;
+  box-shadow    : 0 1.5px .5px 1px rgba(0,0,0, .1);
+  text-align    : left;
+  text-align    : center;
+  font-family   : Roboto;
+}
+
+.mini {
+  height:15%;
+  min-height:150px;
+  min-width:200px;
+  width     : 30%;
+  min-width : 175px;
+}
+
+.secondary {
+  display : none;
+}
+
+.hamburger {
+  width       : 28px;
+  height      : 17px;
+  margin-left : 1%;
+}
+
+.drawer {
+  z-index    : 10;
+  position   : absolute;
+  top        : 0;
+  left       : -18%;
+  width      : 18%;
+  height     : 100%;
+  background : white;
+  box-shadow : 1px 0 3px 2px rgba(0,0,0, .1);
+}
+
+.drawer_spacer {
+  width  : 100%;
+  height : 7%;
+}
+
+.drawer_menu {
+  margin-left : 10%;
+  font-family : Roboto;
+  font-size   : 14pt;
+  font-weight : 400;
+}
+
+.drawer_menu_text {
+  width      : 100%;
+  height     : 6%;
+  min-height : 40px;
+  cursor     : hand;
+}
+
+.overlay {
+  z-index    : 7;
+  display    : none;
+  position   : absolute;
+  top        : 7%;
+  right      : 0;
+  width      : 100%;
+  height     : 93%;
+  opacity    : 1;
+  background : rgba(0,0,0, .25);
+}
+
+.envelope {
+  width  : auto;
+  height : auto;
+  margin : 20px;
+}
+
+.usr_envelope {
+  width  : 100%;
+  height : 50%;
+  margin : 10px;
+}
+
+.chat_container {
+  width         : auto;
+  height        : 75%;
+  margin        : 10px;
+  overflow-y    : scroll;
+  border-radius : 7px;
+  text-align    : center;
+  font-size     : 14pt;
+}
+
+.chat_container::-webkit-scrollbar {
+  display : none;
+}
+
+h3 {
+  font-weight : 200;
+}
+
+.msg {
+  display : none;
+  color   : #c0c0c0;
+}
+
+.chat_message_wrapper {
+  display        : flex;
+  width          : auto;
+  margin         : 0;
+  padding        : 0;
+  text-align     : left;
+  flex-direction : row;
+  flex-wrap      : nowrap;
+}
+
+.chat_info {
+  display      : block;
+  width        : 15%;
+  color        : rgba(0,145,234 ,1);
+  border-right : 1px solid rgba(0,0,0, .15);
+  font-size    : 11pt;
+}
+
+.status_text {
+  color : rgba(0,0,0, .4);
+}
+
+.toggle_settings {
+  display       : none;
+  position      : absolute;
+  bottom        : 2%;
+  left          : 2%;
+  width         : auto;
+  height        : auto;
+  margin        : 2%;
+  padding       : 2%;
+  color         : inherit;
+  color         : black;
+  border-radius : 9px;
+  background    : inherit;
+  text-align    : left;
+  font-size     : 13pt;
+  font-weight   : 200;
+  white-space   : nowrap;
+}
+
+.toggle_setting_item {
+  display     : flex;
+  width       : auto;
+  align-items : center;
+}
+
+.toggle {
+  width         : 20px;
+  height        : 20px;
+  margin-left   : 6%;
+  border        : 2px solid rgba(255,255,255, .4);
+  border-radius : 20px;
+  font-size     : 0;
+}
+
+.toggle:active,
+.toggle:focus {
+  outline : none;
+}
+
+.toggle_inactive {
+  background : rgba(120,144,156 ,1);
+  box-shadow : inset 0 1px 2px rgba(0,0,0, .2);
+}
+
+.toggle_active {
+  background : rgba(25,118,210 ,1);
+  box-shadow : 0 1px 2px 1px rgba(0,0,0, .2);
+}
+
+.light_mode {
+  color      : black;
+  background : white;
+}
+
+.chat_content_area {
+  width       : auto;
+  margin-left : 5%;
+  text-align  : left;
+  white-space : normal;
+  word-wrap   : break-word;
+  user-select : none;
+}
+
+.global_dark_mode {
+  color      : #e7e7e7;
+  background : #111;
+}
+
+.dim {
+  z-index    : 0;
+  display    : default;
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  width      : 100%;
+  height     : 100%;
+  background : rgba(255,255,255, .6);
+}
+
+.text {
+  width      : 100%;
+  height     : 40px;
+  margin     : 5px;
+  border     : 0;
+  background : none;
+  outline    : 0;
+  font-size  : 15pt;
+}
+
+.input_wrapper {
+  padding       : 2%;
+  border-radius : 5px;
+  background    : white;
+  box-shadow    : 0 2px 3px 1px rgba(0,0,0, .15);
+}
+
+.name_wrapper {
+  width : 100%;
+}
+
+.msg_wrapper {
+  width : 50%;
+}
+
+.post_box {
+  border-bottom : 1px solid rgba(0,0,0, .15);
+}
+
+.post_box_chat {
+  width : 90%;
+}
+
+.post_box_chat:active,
+.post_box_chat:focus {
+  position : relative;
+  top      : 1px;
+}
+
+.post_box_name {
+  width  : 90%;
+  margin : 0 0 auto;
+}
+
+.post_box:active,
+.post_box:focus {
+  border-bottom : 2px solid rgba(0,145,234 ,1);
+  outline       : 0;
+}
+
+.post_box_no_name_warning:active,
+.post_box_no_name_warning:focus {
+  border-bottom : 2px solid #e74c3c;
+  outline       : 0;
+}
+
+.post_area {
+  width      : 100%;
+  height     : 30px;
+  margin     : 0 auto;
+  text-align : center;
+}
+
+.chat_box_cutout {
+  width         : 50%;
+  min-width     : 140px;
+  height        : auto;
+  margin        : 0 auto;
+
+}
+
+.submit {
+  width          : 125px;
+  height         : 50px;
+  margin-top     : 25px;
+  color          : rgba(0,145,234 ,1);
+  border         : 2px solid rgba(0,145,234 ,1);
+  border-radius  : 3px;
+  background     : none;
+  font-size      : 12pt;
+  font-weight    : 600;
+  letter-spacing : 1pt;
+}
+
+.submit:active,
+.submit:focus {
+  outline : 0;
+}
+
+.users_online {
+  display       : inline;
+  display       : none;
+  width         : auto;
+  min-width     : 175px;
+  height        : auto;
+  margin        : 2%;
+  padding       : 2%;
+  color         : inherit;
+
+  border-radius : 9px;
+  background    : none;
+  text-align    : left;
+  font-size     : 15pt;
+  font-weight   : 400;
+  white-space   : nowrap;
+}
+
+.users_online::-webkit-scrollbar {
+  display : none;
+}
+
+.indicator {
+  width         : 15px;
+  height        : 15px;
+  float         : left;
+  margin-right  : 10px;
+  border        : 2px solid rgba(255,255,255, .4);
+  border-radius : 20px;
+  background    : #2ecc71;
+  box-shadow    : 0 2px 1px 0px rgba(0,0,0, .2);
+}
+
+.ind_user {
+  display     : flex;
+  margin-top  : 5px;
+  margin-left : 15%;
+  background  : none;
+  align-items : center;
+}
+
+.author {
+  position    : absolute;
+  right       : 2%;
+  bottom      : 2%;
+  color       : white;
+  text-shadow : 0 3px 2px rgba(0,0,0, .2);
+  font-family : Lobster;
+  font-size   : 21pt;
+}
+
+.timestamp {
+  display : none;
+}
